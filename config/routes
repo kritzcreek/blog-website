@@ -5,3 +5,7 @@
 /robots.txt RobotsR GET
 
 / HomeR GET POST
+/blogpost BlogpostR GET POST
+/blogpost/new NewBlogPostR GET
+!/blogpost/#BlogpostId BlogpostDetailR GET
+/blogpost/#BlogpostId/comment NewCommentR POST

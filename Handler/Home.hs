@@ -13,6 +13,7 @@ import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3,
 -- inclined, or create a single monolithic file.
 getHomeR :: Handler Html
 getHomeR = do
+    redirect BlogpostR
     (formWidget, formEnctype) <- generateFormPost sampleForm
     let submission = Nothing :: Maybe (FileInfo, Text)
         handlerName = "getHomeR" :: Text

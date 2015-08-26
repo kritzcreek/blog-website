@@ -1,0 +1,9 @@
+<h1 class="ui header">Blogposts
+
+<div class="ui raised segment">
+  <ul>
+    $forall Entity blogpostId blogpost <- blogposts
+      <h3 class="ui header">
+        <a href=@{BlogpostDetailR blogpostId}> #{blogpostTitle blogpost}
+
+<a type="button" href=@{NewBlogPostR} class="ui button positive">New Blogpost

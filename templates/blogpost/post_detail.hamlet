@@ -1,0 +1,20 @@
+<h1> #{blogpostTitle blogpost}
+<article .ui .segment>
+  #{blogpostContent blogpost}
+  <a type="button" href=@{BlogpostR} .ui .button> Back
+
+<div .ui .segment>
+  <div .ui .comments>
+    <h3 .ui .dividing .header> Comments
+    $forall Entity _ comment <- comments
+      <div .comment>
+        <div .content>
+          <a .author>#{commentAuthor comment}
+          <div .text>#{commentContent comment}
+
+  <hr>
+  <h3 .ui .dividing .header> Add a comment
+  <form method=post action=@{NewCommentR blogpostId} enctype=#{commentEnctype} .ui .form>
+    ^{commentWidget}
+    <br>
+    <button type="submit" .ui .primary .button>Submit Comment
